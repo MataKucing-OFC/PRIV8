@@ -443,11 +443,14 @@ def menu():
 {gr}4{res}. Admin Page Finder
 {gr}5{res}. Subdomain Scanner
 {gr}6{res}. Log Splitter (Pisahkan URL)
-{gr}7{res}. Laravel Auto Shell Uploader (NEMESIS)
+{gr}7{res}. Laravel Auto Shell Uploader
 {gr}8{res}. Grabber
 {gr}9{res}. WP-Install
 {gr}10{res}. Exploit CVE-2023-5360
 {gr}11{res}. Hunter Search Toolz
+{gr}12{res}. Exploit CVE-2024-6624 
+{gr}13{res}. Rocket LMS Shell Upload Vulnerability
+{gr}14{res}. WFU (WORDPRESS FILE UPLOAD 2 RCE REUPDATE BY NEMESIS)
 {gr}0{res}. Keluar
 {mg}==DIPUJI GA TERBANG DIHINA WAR KITA BANG?==""")
 
@@ -476,6 +479,14 @@ def menu():
             os.system('python3 Toolz/royaltheme.py -o Result/CVE-2023-5360_Result.txt -f multiplier.php -l' + target)
         elif pilih == "11":
             os.system('python3 Toolz/hunter.py')
+        elif pilih == "12":
+            os.system('python3 Toolz/CVE-2024-6624.py')
+        elif pilih == "13":
+            target = input(f'{gr}Give Me Your Target ex list.txt{wh}/{red} > {gr}${res} ')
+            os.system('python3 Toolz/lms-auto.py -t 10 -l' + target)
+        elif pilih == "14":
+            target = input(f'{gr}Give Me Your Target ex list.txt{wh}/{red} > {gr}${res} ')
+            os.system('python3 Toolz/WFU.py -i' + target)
         elif pilih == "0":
             print(f"{gr}[✓] Keluar dari program.{res}")
             break
